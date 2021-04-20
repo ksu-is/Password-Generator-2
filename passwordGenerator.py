@@ -1,5 +1,18 @@
 # passwordGenerator.py
 
+
+#attempt to open with flask
+#from flask import Flask, render_template, request
+#app = Flask(__name__)
+#@app.route("Password")
+#def Password():
+#    return render_template("passwordgenerator.html")
+
+
+#attempt to use TK
+from tkinter import *
+from tkinter.ttk import *
+import random
 import random
 
 def main():
@@ -75,5 +88,24 @@ def validator(password, y):
 
     else:
         return (True, y)
-             
+
+
+
+#Creating GUI window
+root = Tk()
+root.title("Welcome to Password Generator")
+
+password = Label(root, text="Your Password", font=("Arial", 16))
+password.grid(row=0) 
+entry = Entry(root) 
+entry.grid(row=1) 
+
+#if __name__=="__main__":
+    #app.run(debug=True)
+
+#Starting GUI
+root.geometry("700x500+10+20")
+root.mainloop() 
+
+#Calling the app          
 main()
