@@ -6,15 +6,15 @@
 -[x]Get and Run code for porject
 
 # Sprint 2
--[]Atleast 6 commits to repository 
--[]Add useful comments to comits
+- [ ]Atleast 6 commits to repository 
+- [ ]Add useful comments to comits
 
 
 # Sprint 3
--[]Add more commits and keep coding
--[]Create PowerPoint slide for marketing the project
+- [ ]Add more commits and keep coding
+- [ ]Create PowerPoint slide for marketing the project
 
 # Present
--[]Schedule a presenting time
--[]Record the presentation
--[]DONE
+- [ ]Schedule a presenting time
+- [ ]Record the presentation
+- [ ]DONE
