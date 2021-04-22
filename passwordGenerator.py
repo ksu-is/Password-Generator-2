@@ -10,22 +10,26 @@
 
 
 #attempt to use TK
+
 from tkinter import *
 from tkinter.ttk import *
 import random
 
-
+lenght_var=StringVar()
 def main():
-    print("Welcome to Password Generator v1.0 \n")
+    print("Welcome to Password Generator \n")
     while True:
-        length = eval(input("Enter how long you would like your password to be > "))
+        #length = eval(input("Enter how long you would like your password to be:"))
+        length = length_var.get()
+        length_var.set("")
         if length < 8:
             print("A secure password should have a length greater than 8 please try again!")
         else:
             break
+    
     generator(length)
 
-    
+
 def generator(y):
     "Generates the password"
     x = True
@@ -102,15 +106,18 @@ password = Label(root, text="Your Password", font=("Arial", 16))
 password.grid(row=7) 
 entry = Entry(root) 
 entry.grid(row=8) 
-#start the app
 
+#start the app
 start = Button(root, text="Start Application", command=main)
 start.grid(row=0)
-#Length prompt and sumbit
+
+#Length label
 combo_label = Label(root, text="How long would you like the password?", font=("Arial", 16))
-combo_label.grid(row=1)  
+combo_label.grid(row=1) 
+#generate button
 generate_button = Button(root, text="Generate Passowrd", command=generator)
-entry = Entry(root)
+#Entry
+entry = Entry(root, textvariable = length_var, font=("Arial", 16))
 entry.grid(row=2)
 generate_button.grid(row=3)
 
@@ -121,8 +128,12 @@ generate_button.grid(row=3)
     #app.run(debug=True)
 
 #Starting GUI
-root.geometry("700x500+10+20")
+root.geometry("300x200")
 root.mainloop() 
 
 #Calling the app          
 main()
+
+
+#testing space--------------
+#length = lengthvar.get()
