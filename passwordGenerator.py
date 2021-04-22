@@ -13,7 +13,7 @@
 from tkinter import *
 from tkinter.ttk import *
 import random
-import random
+
 
 def main():
     print("Welcome to Password Generator v1.0 \n")
@@ -93,12 +93,29 @@ def validator(password, y):
 
 #Creating GUI window
 root = Tk()
+var = IntVar() 
+var1 = IntVar() 
 root.title("Welcome to Password Generator")
 
+#Final Password Output
 password = Label(root, text="Your Password", font=("Arial", 16))
-password.grid(row=0) 
+password.grid(row=7) 
 entry = Entry(root) 
-entry.grid(row=1) 
+entry.grid(row=8) 
+#start the app
+
+start = Button(root, text="Start Application", command=main)
+start.grid(row=0)
+#Length prompt and sumbit
+combo_label = Label(root, text="How long would you like the password?", font=("Arial", 16))
+combo_label.grid(row=1)  
+generate_button = Button(root, text="Generate Passowrd", command=generator)
+entry = Entry(root)
+entry.grid(row=2)
+generate_button.grid(row=3)
+
+
+#Creates passowrd
 
 #if __name__=="__main__":
     #app.run(debug=True)
