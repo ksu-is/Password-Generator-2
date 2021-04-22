@@ -14,14 +14,23 @@
 from tkinter import *
 from tkinter.ttk import *
 import random
+#my own function to start
 
-lenght_var=StringVar()
+def start_gen():
+    length=length_var.get()
+    print("Your password length is"+ length)
+    length_var.set("")
+
+
+
+
+
+
 def main():
     print("Welcome to Password Generator \n")
     while True:
-        #length = eval(input("Enter how long you would like your password to be:"))
-        length = length_var.get()
-        length_var.set("")
+        length = eval(input("Enter how long you would like your password to be:"))
+        
         if length < 8:
             print("A secure password should have a length greater than 8 please try again!")
         else:
