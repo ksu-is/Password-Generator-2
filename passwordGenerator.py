@@ -16,13 +16,13 @@ from tkinter.ttk import *
 import random
 #my own function to start
 
-def start_gen():
-    length=length_var.get()
-    print("Your password length is"+ length)
-    length_var.set("")
 
-
-
+#NEW CODE
+#def start_gen():
+#    length = pw_length.get()
+#    messagebox.showinfo(title='message',message='Your password length is '+length)
+#    return length
+#    generator(length)
 
 
 
@@ -126,6 +126,7 @@ combo_label.grid(row=1)
 #generate button
 generate_button = Button(root, text="Generate Passowrd", command=generator)
 #Entry
+length = StringVar(root, value="not available")
 entry = Entry(root, textvariable = length_var, font=("Arial", 16))
 entry.grid(row=2)
 generate_button.grid(row=3)
@@ -146,3 +147,5 @@ main()
 
 #testing space--------------
 #length = lengthvar.get()
+
+
