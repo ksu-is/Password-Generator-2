@@ -127,7 +127,7 @@ combo_label.grid(row=1)
 generate_button = Button(root, text="Generate Passowrd", command=generator)
 #Entry
 length = StringVar(root, value="not available")
-entry = Entry(root, textvariable = length_var, font=("Arial", 16))
+entry = Entry(root, textvariable = length, font=("Arial", 16))
 entry.grid(row=2)
 generate_button.grid(row=3)
 
