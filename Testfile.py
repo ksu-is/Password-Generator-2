@@ -1,5 +1,5 @@
 from tkinter import *
-
+import tkinter as tk
 from tkinter import messagebox
 import random
 
@@ -9,6 +9,7 @@ root = Tk()
 root.title('Password Generator')
 root.geometry('300x300')
 
+length=12
 #This gets the password length
 def start_gen():
     length = pw_length.get()
@@ -16,21 +17,8 @@ def start_gen():
     return length
     generator(length)
 
-    
-#Length of password label
-pw_length = Label(root, text="Enter password length").pack()
-pw_length = Entry(root)
-pw_length.pack()
-#length od password button
-Button(root, text="Submit", command=start_gen).pack()
-#blank space
-blank = Label(root, text="                 ")
-blank.pack()
-#Final Password label
-final_password = Label(root, text="Your Password")
-final_password.pack()
-#final password output box
 
+    
 
 
 def generator(y):
@@ -69,6 +57,7 @@ def generator(y):
         (x, y) = validator(password, y)
 
 
+
 def validator(password, y):
     "Validates the password"
     lower = 0
@@ -89,20 +78,46 @@ def validator(password, y):
             
     #Checks that the password contains at least one of each character type      
     if lower > 0 and upper > 0 and num > 0 and special > 0:
-        print("Your password has been successfully generated and validated!")
-        print("Password > " + ''.join(password))
+        done = print("Your password has been successfully generated and validated!")
+        p_word = print("Password > " + ''.join(password))
         return (False, y)
 
     else:
         return (True, y)
 
+def close():
+    root.destroy()
 
-generator_btn = Button(root, text="Generate Password", command=generator)
-generator_btn.pack()
+#Length of password label
+pw_length = Label(root, text="Enter password length").pack()
+pw_length = Entry(root)
+pw_length.pack()
+#length of password button
+Button(root, text="Submit", command=start_gen).pack()
+#blank space
+blank = Label(root, text="                 ")
+blank.pack()
+#Final Password label
+final_password = Label(root, text="Your Password")
+final_password.pack()
 
+#final password output box
+password_done = Entry(root)
+password_done.pack()
+password_output = Button(root, text="Generate Password", command=generator(length))
+password_output.pack()
 
+#blank space 
+blank = Label(root, text="                 ")
+blank.pack()
+blank = Label(root, text="                 ")
+blank.pack()
 
-
+#Close window
+close_page = Button(root, text="Close Password Generator", command=close)
+close_page.pack()
+#display = Button(root, text="display password", command=validator(, length))
+#display.pack()
 
 
 
