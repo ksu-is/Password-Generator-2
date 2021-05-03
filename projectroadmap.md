@@ -11,10 +11,10 @@
 
 
 # Sprint 3
-- [ ] Add more commits and keep coding
-- [ ] Create PowerPoint slide for marketing the project
+- [x] Add more commits and keep coding
+- [x] Create PowerPoint slide for marketing the project
 
 # Present
-- [ ] Schedule a presenting time
+- [x] Schedule a presenting time
 - [ ] Record the presentation
 - [ ] DONE
